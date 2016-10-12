@@ -1,8 +1,7 @@
 # Rock, Paper, Scissors
 
 puts "Your move: rock, paper, or scissors?"
-user_move = gets.chomp
-
+user_move = gets.chomp.downcase
 moves = ["rock", "paper", "scissors"]
 
 computer_move = moves.sample
@@ -22,4 +21,6 @@ if user_move == computer_move
     puts "You lose!"
   elsif user_move == "scissors" && computer_move == "paper"
     puts "You win!"
+  elsif user_move != moves
+    puts "That doesn't seem to be a valid move."
 end
